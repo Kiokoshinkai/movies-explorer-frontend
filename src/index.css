@@ -18,6 +18,5 @@
   min-height: 100vh;
 }
 
-
 @import url('./vendor/normalize.css');
 @import url('./vendor/fonts/fonts.css');

@@ -4,7 +4,12 @@
   justify-content: space-between;
   margin-left: 44px;
   width: 92%;
+}
 
+.navigation__reg {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .navigation__icon {
@@ -32,7 +37,6 @@
   font-weight: 500;
 }
 
-
 .navigation-nav {
   display: none;
 }
@@ -58,8 +62,8 @@
   color: #000000;
   padding: 0;
   cursor: pointer;
+  margin-left: 30px;
 }
-
 
 .navigation__link:hover,
 .navigation__button:hover,
@@ -67,7 +71,6 @@
   transition: opacity 0.5s linear;
   opacity: 0.5;
 }
-
 
 @media screen and (max-width: 768px) {
   .navigation {
@@ -93,7 +96,6 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-image: url('../../images/icon__burger.svg');
-
   }
 
   .navigation__icon {
@@ -119,8 +121,5 @@
       height: 43px;
       background-size: cover;
       margin-right: 10px;
-
   }
-
-
 }
