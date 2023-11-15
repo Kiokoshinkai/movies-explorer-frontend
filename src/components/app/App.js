@@ -159,7 +159,7 @@ function App() {
     setFoundMovies([])
   }
 
-  // Поиск фильмов
+  //* Поиск фильмов
 
   const findMovies = (movies, keyword, checkbox) => {
     const moviesКeywordSearch = movies.filter((movie) => {
@@ -172,12 +172,12 @@ function App() {
     }
   }
 
-  // Поиск короткометражек
+  //* Поиск короткометражек
   const searchShortMovies = (movies) => {
     return movies.filter((movie) => movie.duration <= 40);
   };
 
-  // Отслеживание состояния стэйтов
+  //* Отслеживание состояния стэйтов
   useEffect(() => {
     setSearchKeyword(localStorage.getItem('searchKeyword' || ''));
     setSelectedCheckbox(localStorage.getItem('selectedCheckbox') === 'true');
@@ -228,7 +228,7 @@ function App() {
     localStorage.setItem('selectedCheckbox', !selectedCheckbox);
   };
 
-  // Поиск фильмов из сохраненных ранее по ключевому слову
+  //* Поиск фильмов из сохраненных ранее по ключевому слову
   function handleSearchSavedMovies(keyword) {
     const filteredMovies = findMovies(savedMovies, keyword, checkboxSavedMovies);
     if (filteredMovies.length === 0) {
@@ -240,7 +240,7 @@ function App() {
     }
   }
 
-  // Проверка сохранен ли фильм
+  //* Проверка сохранен ли фильм
   const isSavedMovies = (movie) => {
     return savedMovies.some(item => item.movieId === movie.id && item.owner === currentUser._id)
   }

@@ -34,6 +34,7 @@ const Movies = ({ loggedIn, movies, searchKeyword, isLoading, checked, onCheckbo
                     />
                 )}
             </main>
+
         </>
     )
 }

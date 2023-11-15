@@ -11,7 +11,7 @@ export const useWSize = () => {
             setWindowSize(window.innerWidth);
         }
         if (isWindowClient) {
-            window.addEventListener('resize', handleResize); // слушатель изменения размера окна
+            window.addEventListener('resize', handleResize); // вешаем слушатель изменения размера окна
             return () => window.removeEventListener('resize', handleResize);
         }
     }, [isWindowClient, setWindowSize]);

@@ -20,7 +20,7 @@ export class MainApi {
       };
   }
 
-  // загрузка информации о пользователе с сервера
+  //загрузка информации о пользователе с сервера
   getUserInfo() {
       return fetch(`${this._baseUrl}/users/me`, {
           headers: this._getHeaders(),
@@ -77,6 +77,7 @@ export class MainApi {
           headers: this._getHeaders(),
       }).then(res => this._handleResponse(res))
   };
+
 
 }
 
