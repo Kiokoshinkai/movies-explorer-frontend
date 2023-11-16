@@ -3,7 +3,7 @@
 
 Адрес репозитория: https://github.com/Kiokoshinkai/movies-explorer-frontend
 
-Ссылка на пул реквест: https://github.com/Kiokoshinkai/movies-explorer-frontend/pull/2
+Ссылка на пул реквест: https://github.com/Kiokoshinkai/movies-explorer-frontend/pull/3
 
 ## Ссылки на проект
 IP 62.84.113.99
