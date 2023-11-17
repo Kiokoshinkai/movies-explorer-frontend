@@ -147,7 +147,6 @@ function App() {
     });
   }
 
-  //1
   useEffect(() => {
     if (loggedIn) {
       if (currentPath === '/signup' || currentPath === '/signin') {

@@ -29,7 +29,8 @@ const useForm = () => {
         isValid,
         handleChange,
         setValues,
-        resetForm
+        resetForm,
+        setIsValid
     };
 }
 
