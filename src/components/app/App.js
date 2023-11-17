@@ -10,7 +10,6 @@ import Profile from '../Profile/Profile';
 import SavedMovies from '../SavedMovies/SavedMovies';
 import Main from '../main';
 import Movies from '../Movies/Movies';
-import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import * as auth from '../../utils/auth';
 import mainApi from "../../utils/MainApi";
 import moviesApi from '../../utils/MoviesApi';
