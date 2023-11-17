@@ -337,8 +337,8 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-              <Header loggedIn={loggedIn}/>
-              <Main loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+              <Header loggedIn={loggedIn} route="/" />
+              {<Main  />}
               <Footer />
             </>
           } />
