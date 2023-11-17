@@ -54,7 +54,7 @@ function App() {
     auth.registerUser({ name, email, password })
       .then(() => {
         onLogin({ email, password });
-        navigate('/movies', { replace: true });
+        navigate('/movies');
       })
       .catch((err) => {
         console.error('Ошибка регистрации:', err);
@@ -77,7 +77,7 @@ function App() {
           setLoggedIn(true);
           localStorage.setItem('jwt', res.token);
           checkToken()
-          navigate('/movies', { replace: true });
+          navigate('/movies');
         }
       })
       .catch((err) => {
