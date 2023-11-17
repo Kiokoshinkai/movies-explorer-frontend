@@ -5,8 +5,6 @@ import Logo from '../Logo/Logo';
 import './Register.css'
 import { Link } from 'react-router-dom';
 
-const urlRegex = /http[s]?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/;
-
 const Register = ({ onRegister, errorMessage }) => {
     const { values, handleChange, resetForm, errors, isValid } = useForm();
 
@@ -14,7 +12,7 @@ const Register = ({ onRegister, errorMessage }) => {
 
     useEffect(() => {
         // Проверяем, когда кнопка должна стать активной
-        if (isValid && values.name && values.email !== urlRegex && values.password) {
+        if (isValid && values.name && !values.email && values.password) {
             setIsButtonActive(true);
         } else {
             setIsButtonActive(false);
@@ -23,7 +21,7 @@ const Register = ({ onRegister, errorMessage }) => {
 
     function handleSubmit(evt) {
         evt.preventDefault();
-        if (!values.password || values.email !== urlRegex || !values.name) {
+        if (!values.password || !values.email || !values.name) {
             return;
         }
         onRegister(values);
