@@ -56,7 +56,7 @@ const Register = ({ onRegister, errorMessage }) => {
                         id='email'
                         label='E-mail'
                         name='email'
-                        type='email'
+                        type='text'
                         required
                         autoComplete='email'
                         value={values.email || ''}
