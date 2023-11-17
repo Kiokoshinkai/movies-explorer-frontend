@@ -5,6 +5,8 @@ import Logo from '../Logo/Logo';
 import './Register.css'
 import { Link } from 'react-router-dom';
 
+const urlRegex = /http[s]?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/;
+
 const Register = ({ onRegister, errorMessage }) => {
     const { values, handleChange, resetForm, errors, isValid } = useForm();
 
@@ -53,7 +55,7 @@ const Register = ({ onRegister, errorMessage }) => {
                         label='E-mail'
                         name='email'
                         type='email'
-                        pattern='.+\.ru'
+                        pattern={urlRegex}
                         required
                         autoComplete='email'
                         value={values.email || ''}
