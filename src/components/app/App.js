@@ -46,7 +46,7 @@ function App() {
   const [filteredMovies, setFilteredMovies] = useState(allSavedMovies);
 
 
-  useEffect(() => { checkToken() })
+  useEffect(() => { checkToken()}, [])
 
 
   // регистрация
