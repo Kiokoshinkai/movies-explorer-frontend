@@ -28,7 +28,7 @@ const Movies = ({ loggedIn, movies, searchKeyword, isLoading, checked, onCheckbo
                         savedMovies={savedMovies}
                         onSaveMovie={onSaveMovie}
                         isSavedMovies={isSavedMovies}
-                        isNotFound={isNotFound}
+                        //isNotFound={isNotFound}
                         isServerError={isServerError}
                         onDeleteMovie={onDeleteMovie}
                     />
