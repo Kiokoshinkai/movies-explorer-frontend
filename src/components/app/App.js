@@ -146,6 +146,16 @@ function App() {
         });
     });
   }
+
+  //1
+  useEffect(() => {
+    if (loggedIn) {
+      if (currentPath === '/signup' || currentPath === '/signin') {
+        navigate('/movies', { replace: true });
+      }
+    }
+  }, [currentPath, loggedIn])
+
   // выход из аккаунта
   function onSignOut() {
     setLoggedIn(false);
@@ -338,7 +348,7 @@ function App() {
           <Route path="/" element={
             <>
               <Header loggedIn={loggedIn} route="/" />
-              {<Main  />}
+              {<Main loggedIn={loggedIn} setLoggedIn={setLoggedIn} />}
               <Footer />
             </>
           } />
