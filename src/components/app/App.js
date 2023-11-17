@@ -46,7 +46,7 @@ function App() {
   const [filteredMovies, setFilteredMovies] = useState(allSavedMovies);
 
 
-  useEffect(() => { checkToken() }, [])
+  useEffect(() => { checkToken() })
 
 
   // регистрация
@@ -54,7 +54,7 @@ function App() {
     auth.registerUser({ name, email, password })
       .then(() => {
         onLogin({ email, password });
-        navigate('/movies');
+        navigate('/movies', { replace: true });
       })
       .catch((err) => {
         console.error('Ошибка регистрации:', err);
@@ -77,7 +77,7 @@ function App() {
           setLoggedIn(true);
           localStorage.setItem('jwt', res.token);
           checkToken()
-          navigate('/movies');
+          navigate('/movies', { replace: true });
         }
       })
       .catch((err) => {
