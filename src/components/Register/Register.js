@@ -14,7 +14,7 @@ const Register = ({ onRegister, errorMessage }) => {
 
     useEffect(() => {
         // Проверяем, когда кнопка должна стать активной
-        if (isValid && values.name && (values.email === urlRegex) && values.password) {
+        if (isValid && values.name && (values.email !== urlRegex) && values.password) {
             setIsButtonActive(true);
         } else {
             setIsButtonActive(false);
