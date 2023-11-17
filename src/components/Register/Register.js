@@ -52,8 +52,8 @@ const Register = ({ onRegister, errorMessage }) => {
                         id='email'
                         label='E-mail'
                         name='email'
-                        type='text'
-                        pattern='^(http(s){0,1}://.){0,1}[-a-zA-Z0-9@:%.+~#=]{2,256}.[a-z]{2,6}\b([-a-zA-Z0-9@:%+.~#?&//=]*)$'
+                        type='email'
+                        pattern='(?=^.{1,60}$).+@.+\.[A-Za-z]+$'
                         required
                         autoComplete='email'
                         value={values.email || ''}
