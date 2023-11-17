@@ -16,8 +16,6 @@ const Register = ({ onRegister, errorMessage }) => {
         // Проверяем, когда кнопка должна стать активной
         if (isValid && values.name && values.email && values.password) {
             setIsButtonActive(true);
-        } else if (values.email === urlRegex) {
-            setIsButtonActive(false)
         } else {
             setIsButtonActive(false);
         }
@@ -57,6 +55,7 @@ const Register = ({ onRegister, errorMessage }) => {
                         label='E-mail'
                         name='email'
                         type='email'
+                        pattern={urlRegex}
                         required
                         autoComplete='email'
                         value={values.email || ''}
