@@ -23,7 +23,7 @@ const Register = ({ onRegister, errorMessage }) => {
 
     function handleSubmit(evt) {
         evt.preventDefault();
-        if (!values.password || !values.email || !values.name) {
+        if (!values.password || values.email !== urlRegex || !values.name) {
             return;
         }
         onRegister(values);
