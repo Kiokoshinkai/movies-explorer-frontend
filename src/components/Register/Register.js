@@ -53,7 +53,7 @@ const Register = ({ onRegister, errorMessage }) => {
                         label='E-mail'
                         name='email'
                         type='email'
-                        pattern='^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$'
+                        pattern='.+^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$'
                         required
                         autoComplete='email'
                         value={values.email || ''}
