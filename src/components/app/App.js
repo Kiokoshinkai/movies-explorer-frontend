@@ -258,10 +258,10 @@ function App() {
   // Отслеживание состояние стэйта чекбокса сохраненные фильмы
   useEffect(() => {
     if (localStorage.getItem('checkboxSavedMovies') === 'true') {
-      setCheckboxSavedMovies(true)
+      //setCheckboxSavedMovies(true)
       setAllSavedMovies(searchShortMovies(savedMovies))
     } else {
-      setCheckboxSavedMovies(false)
+      //setCheckboxSavedMovies(false)
       setAllSavedMovies(savedMovies)
     }
   }, [savedMovies]);
