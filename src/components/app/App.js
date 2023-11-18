@@ -365,7 +365,7 @@ function App() {
                 savedMovies={savedMovies}
                 isSavedMovies={isSavedMovies}
                 onSaveMovie={handleSaveMovie}
-                isNotFound={setIsNotFound(false)}
+                isNotFound={isNotFound}
                 isServerError={isServerError}
                 onDeleteMovie={handleDeleteMovie}
                 onSubmit={handleRequestMovies}
@@ -384,7 +384,7 @@ function App() {
                 isSavedMovies={isSavedMovies}
                 checked={checkboxSavedMovies}
                 onCheckbox={handleChangeCheckboxSavedMovies}
-                isNotFound={setIsNotFound(false)}
+                isNotFound={isNotFound}
                 onDeleteMovie={handleDeleteMovie}
                 onSubmit={handleSearchSavedMovies}
               />
