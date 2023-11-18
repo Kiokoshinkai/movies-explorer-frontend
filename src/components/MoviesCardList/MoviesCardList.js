@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useWSize } from "../../hooks/useWSize";
 import {
     MAX_WIDTH_1280,
+    MAXMID_WIDTH_989,
     MIDDLE_WIDTH_768,
     MIN_WIDTH_480,
     INITIAL_CARDS_1280,
@@ -25,13 +26,13 @@ const MoviesCardList = ({ movies, isNotFound, isServerError, isMoviesPage, onDel
             setInitialCards(INITIAL_CARDS_1280);
             setMoreCards(MORE_CARDS_3);
         }
-        if (windowWidth < MAX_WIDTH_1280 && windowWidth >= MIDDLE_WIDTH_768) {
+        if (windowWidth < MAX_WIDTH_1280 && windowWidth >= MAXMID_WIDTH_989) {
             setInitialCards(INITIAL_CARDS_768);
             setMoreCards(MORE_CARDS_2);
         }
         if (windowWidth < MIDDLE_WIDTH_768 && windowWidth >= MIN_WIDTH_480) {
             setInitialCards(INITIAL_CARDS_768s);
-            setMoreCards(MORE_CARDS_2);
+            setMoreCards(MORE_CARDS_1);
         }
         if (windowWidth < MIN_WIDTH_480) {
             setInitialCards(INITIAL_CARDS_480);
