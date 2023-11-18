@@ -34,7 +34,7 @@ function App() {
 
   // форма поиска
   const [selectedCheckbox, setSelectedCheckbox] = useState(localStorage.getItem("selectedCheckbox") === 'true'); // Флажок короткометражек не выбран
-
+  const [searchWord, setSearchWord] = useState('');
   const [searchKeyword, setSearchKeyword] = useState('');
   const [checkboxSavedMovies, setCheckboxSavedMovies] = useState(false);
 
@@ -244,9 +244,9 @@ function App() {
     if (filteredMovies.length === 0) {
       setIsNotFound(true);
     } else {
+      setSearchWord(keyword);
       setIsNotFound(false);
       setFilteredMovies(filteredMovies);
-      setAllSavedMovies(filteredMovies);
     }
   }
 
@@ -258,10 +258,8 @@ function App() {
   // Отслеживание состояние стэйта чекбокса сохраненные фильмы
   useEffect(() => {
     if (localStorage.getItem('checkboxSavedMovies') === 'true') {
-      //setCheckboxSavedMovies(true)
       setAllSavedMovies(searchShortMovies(savedMovies))
     } else {
-      //setCheckboxSavedMovies(false)
       setAllSavedMovies(savedMovies)
     }
   }, [savedMovies]);
@@ -342,6 +340,12 @@ function App() {
       })
   }
 
+  let filtredSavedMovies = allSavedMovies
+
+  if (searchWord) {
+    filtredSavedMovies = findMovies(allSavedMovies, searchWord, checkboxSavedMovies);
+  }
+
   return (
     <CurrentUserContext.Provider value={currentUser} >
       <div className="app">
@@ -382,7 +386,7 @@ function App() {
               <ProtectedRoute
                 component={SavedMovies}
                 loggedIn={loggedIn}
-                movies={allSavedMovies}
+                movies={filtredSavedMovies}
                 savedMovies={savedMovies}
                 isSavedMovies={isSavedMovies}
                 checked={checkboxSavedMovies}
