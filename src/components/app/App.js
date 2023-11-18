@@ -46,7 +46,10 @@ function App() {
   const [allSavedMovies, setAllSavedMovies] = useState(savedMovies)
   const [filteredMovies, setFilteredMovies] = useState(allSavedMovies);
 
-
+  useEffect(() => {
+    setSearchWord('');
+    setHasParams(false);
+}, [currentPath])
   useEffect(() => { checkToken()}, [])
 
 
