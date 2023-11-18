@@ -14,7 +14,7 @@ import {
     MORE_CARDS_3,
     MORE_CARDS_2,
     MORE_CARDS_1
-} from '../../utils/constans'
+} from '../../utils/constants'
 
 const MoviesCardList = ({ movies, isNotFound, isServerError, isMoviesPage, onDeleteMovie, onSaveMovie, isSavedMovies }) => {
     const windowWidth = useWSize();

@@ -1,4 +1,4 @@
-import { handleResponse, MOVIE_URL } from './constans';
+import { handleResponse, MOVIE_URL } from './constants';
 
 class MoviesApi {
     constructor(baseUrl) {

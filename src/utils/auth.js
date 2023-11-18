@@ -1,4 +1,4 @@
-import { BASE_URL } from "./constans";
+import { BASE_URL } from "./constants";
 
 function handleResponse(res) {
     if (res.ok) {

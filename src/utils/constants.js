@@ -8,6 +8,7 @@ export const handleResponse = (res) => {
     }
     return Promise.reject(`Ошибка: ${res.status}`)
 };
+
 export const convertDuration = (number) => {
     const minutes = number % 60;
     const hours = (number - minutes) / 60;
@@ -19,6 +20,7 @@ export const convertDuration = (number) => {
         return `${hours}ч ${minutes}м`;
     }
 };
+
 //  ширина экрана
 const MAX_WIDTH_1280 = 1280;
 const MAXMID_WIDTH_990 = 990;

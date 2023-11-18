@@ -1,5 +1,5 @@
 import React from 'react';
-import { convertDuration } from '../../utils/constans';
+import { convertDuration } from '../../utils/constants';
 import { useLocation } from 'react-router-dom';
 import './MoviesCard.css';
 
