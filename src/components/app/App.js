@@ -245,8 +245,7 @@ function App() {
     } else {
       setIsNotFound(false);
       setFilteredMovies(filteredMovies);
-      //setAllSavedMovies(filteredMovies);
-      setFoundMovies(filteredMovies)
+      setAllSavedMovies(filteredMovies);
     }
   }
 
@@ -366,7 +365,7 @@ function App() {
                 savedMovies={savedMovies}
                 isSavedMovies={isSavedMovies}
                 onSaveMovie={handleSaveMovie}
-                isNotFound={isNotFound}
+                isNotFound={setIsNotFound(false)}
                 isServerError={isServerError}
                 onDeleteMovie={handleDeleteMovie}
                 onSubmit={handleRequestMovies}
@@ -385,7 +384,7 @@ function App() {
                 isSavedMovies={isSavedMovies}
                 checked={checkboxSavedMovies}
                 onCheckbox={handleChangeCheckboxSavedMovies}
-                isNotFound={isNotFound}
+                isNotFound={setIsNotFound(false)}
                 onDeleteMovie={handleDeleteMovie}
                 onSubmit={handleSearchSavedMovies}
               />
