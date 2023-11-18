@@ -33,7 +33,7 @@
   cursor: pointer;
 }
 
-.navigation__link_active {
+.navigation__link.active {
   font-weight: 500;
 }
 
@@ -44,10 +44,6 @@
 .navigation__link_unregistered {
   font-size: 12px;
   line-height: 16px;
-}
-
-.navigation__link_active {
-  font-weight: 500;
 }
 
 .navigation__button {
