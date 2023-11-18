@@ -48,9 +48,9 @@ const MoviesCardList = ({ movies, isNotFound, isServerError, isMoviesPage, onDel
         <section className='cards'>
             {isMoviesPage ? (
                 <>
-                    {(hasParams || isServerError) && (
+                    {((hasParams && isNotFound) || isServerError) && (
                         <p className='cards__message'>
-                            {hasParams && 'Ничего не найдено'}
+                            {hasParams && isNotFound && 'Ничего не найдено'}
                             {isServerError && 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.'}
                         </p>
                     )}
@@ -85,9 +85,10 @@ const MoviesCardList = ({ movies, isNotFound, isServerError, isMoviesPage, onDel
                 </>
             ) : (
                 <>
-                    {(isNotFound || isServerError) && (
+                    {((hasParams && isNotFound) || isServerError) && (
                         <p className='cards__message'>
-                            {isNotFound ? 'Ничего не найдено.' : 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.'}
+                            {hasParams && isNotFound && 'Ничего не найдено'}
+                            {isServerError && 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.'}
                         </p>
                     )}
 
