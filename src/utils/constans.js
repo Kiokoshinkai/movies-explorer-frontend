@@ -23,7 +23,7 @@ export const convertDuration = (number) => {
 const MAX_WIDTH_1280 = 1280;
 const MAXMID_WIDTH_990 = 990;
 const MIDDLE_WIDTH_768 = 989;
-const MIN_WIDTH_480 = 721;
+const MIN_WIDTH_480 = 720;
 // количество  фильмов от ширины экрана
 const INITIAL_CARDS_1280 = 16;
 const INITIAL_CARDS_990 = 12
