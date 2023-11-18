@@ -11,7 +11,7 @@ function SearchForm({ onSubmit, checked, defaultValue, onCheckbox }) {
 
     useEffect(() => {
         setKeyword(defaultValue)
-    }, [keyword])
+    }, [defaultValue])
 
     const handleChange = (evt) => {
         setKeyword(evt.target.value);

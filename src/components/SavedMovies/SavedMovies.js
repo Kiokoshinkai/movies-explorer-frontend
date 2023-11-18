@@ -16,7 +16,7 @@ const SavedMovies = ({ movies, checked, onCheckbox, isSavedMovies, onSubmit, isN
             />
             <MoviesCardList
                 movies={movies}
-                isMoviesPage={false}
+                isMoviesPage={true}
                 onDeleteMovie={onDeleteMovie}
                 isSavedMovies={isSavedMovies}
                 isNotFound={isNotFound}
