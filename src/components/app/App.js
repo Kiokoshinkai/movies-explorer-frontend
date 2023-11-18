@@ -245,7 +245,8 @@ function App() {
     } else {
       setIsNotFound(false);
       setFilteredMovies(filteredMovies);
-      setAllSavedMovies(filteredMovies);
+      //setAllSavedMovies(filteredMovies);
+      setFoundMovies(filteredMovies)
     }
   }
 
