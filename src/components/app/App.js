@@ -28,7 +28,7 @@ function App() {
   // ошибки загрузки
   const [errorMessage, setErrorMessage] = useState();
   const [isLoading, setIsLoading] = useState(false);
-  const [isNotFound, setIsNotFound] = useState(false);
+  const [isNotFound, setIsNotFound] = useState(true);
   const [isServerError, setIsServerError] = useState(false);
 
   // форма поиска
