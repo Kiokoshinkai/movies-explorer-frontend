@@ -26,7 +26,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
 
   // ошибки загрузки
-  const [errorMessage, setErrorMessage] = useState(false);
+  const [errorMessage, setErrorMessage] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [isNotFound, setIsNotFound] = useState(false);
   const [isServerError, setIsServerError] = useState(false);
