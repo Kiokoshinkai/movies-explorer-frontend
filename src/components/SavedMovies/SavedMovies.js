@@ -4,7 +4,7 @@ import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 
 
-const SavedMovies = ({ movies, checked, onCheckbox, isSavedMovies, onSubmit, isNotFound, savedMovies, onDeleteMovie }) => {
+const SavedMovies = ({ movies, checked, onCheckbox, isSavedMovies, onSubmit, isNotFound, savedMovies, onDeleteMovie, hasParams}) => {
 
 
     return (
@@ -21,6 +21,7 @@ const SavedMovies = ({ movies, checked, onCheckbox, isSavedMovies, onSubmit, isN
                 isSavedMovies={isSavedMovies}
                 isNotFound={isNotFound}
                 savedMovies={savedMovies}
+                hasParams={hasParams}
             />
         </main>
     )

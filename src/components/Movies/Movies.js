@@ -6,7 +6,7 @@ import Preloader from '../Preloader/Preloader';
 
 
 const Movies = ({ loggedIn, movies, searchKeyword, isLoading, checked, onCheckbox, isNotFound, isServerError, onSubmit, onSaveMovie,
-    isSavedMovies, savedMovies, onDeleteMovie, }) => {
+    isSavedMovies, savedMovies, onDeleteMovie, hasParams}) => {
 
     return (
         <>
@@ -31,6 +31,7 @@ const Movies = ({ loggedIn, movies, searchKeyword, isLoading, checked, onCheckbo
                         isNotFound={isNotFound}
                         isServerError={isServerError}
                         onDeleteMovie={onDeleteMovie}
+                        hasParams={hasParams}
                     />
                 )}
             </main>

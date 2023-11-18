@@ -30,6 +30,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [isNotFound, setIsNotFound] = useState(false);
   const [isServerError, setIsServerError] = useState(false);
+  const [hasParams, setHasParams] = useState(false);
 
   // форма поиска
   const [selectedCheckbox, setSelectedCheckbox] = useState(localStorage.getItem("selectedCheckbox") === 'true'); // Флажок короткометражек не выбран
@@ -289,6 +290,7 @@ function App() {
 
   // обработка запроса по поиску
   const handleRequestMovies = (keyword) => {
+    setHasParams(true);
     setIsNotFound(false);
     localStorage.setItem('searchKeyword', keyword); // Записываем в сторедж введенное ключевое слово
     localStorage.setItem('selectedCheckbox', selectedCheckbox); // Записываем в сторедж выставленное положение флажка
@@ -369,6 +371,7 @@ function App() {
                 isServerError={isServerError}
                 onDeleteMovie={handleDeleteMovie}
                 onSubmit={handleRequestMovies}
+                hasParams={hasParams}
               />
               <Footer />
             </>
@@ -387,6 +390,7 @@ function App() {
                 isNotFound={isNotFound}
                 onDeleteMovie={handleDeleteMovie}
                 onSubmit={handleSearchSavedMovies}
+                hasParams={hasParams}
               />
               <Footer />
             </>

@@ -16,7 +16,7 @@ import {
     MORE_CARDS_1
 } from '../../utils/constants'
 
-const MoviesCardList = ({ movies, isNotFound, isServerError, isMoviesPage, onDeleteMovie, onSaveMovie, isSavedMovies }) => {
+const MoviesCardList = ({ movies, isNotFound, isServerError, isMoviesPage, onDeleteMovie, onSaveMovie, isSavedMovies, hasParams}) => {
     const windowWidth = useWSize();
     const [initialCards, setInitialCards] = useState({});
     const [moreCards, setMoreCards] = useState({});
@@ -48,9 +48,10 @@ const MoviesCardList = ({ movies, isNotFound, isServerError, isMoviesPage, onDel
         <section className='cards'>
             {isMoviesPage ? (
                 <>
-                    {(isNotFound || isServerError) && (
+                    {(hasParams || isServerError) && (
                         <p className='cards__message'>
-                            {isNotFound ? 'Ничего не найдено.' : 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.'}
+                            {hasParams && 'Ничего не найдено'}
+                            {isServerError && 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.'}
                         </p>
                     )}
 
