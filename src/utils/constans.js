@@ -25,13 +25,13 @@ const MIDDLE_WIDTH_768 = 768;
 const MIN_WIDTH_480 = 480;
 // количество  фильмов от ширины экрана
 const INITIAL_CARDS_1280 = 16;
-const INITIAL_CARDS_768 = 8;
-const INITIAL_CARDS_768s = 6;
+const INITIAL_CARDS_768 = 9;
+const INITIAL_CARDS_768s = 5;
 const INITIAL_CARDS_480 = 5;
 // добавление фильмов от ширины экрана
 const MORE_CARDS_3 = 4;
-const MORE_CARDS_2 = 2;
-const MORE_CARDS_1 = 1;
+const MORE_CARDS_2 = 3;
+const MORE_CARDS_1 = 2;
 
 export {
     MAX_WIDTH_1280,
